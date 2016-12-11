@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
         <div class="navbar-header">
@@ -40,7 +39,7 @@
                                 <a href="{{ url('/channel/' . $channel->slug) }}">Your Channel</a>
                             </li>
                             <li>
-                                <a href="{{ url('/channel/' . $channel->slug . 'edit') }}">Channel Settings</a>
+                                <a href="{{ url('/channel/' . $channel->slug . '/edit') }}">Channel Settings</a>
                             </li>
                             <li>
                                 <a href="{{ url('/logout') }}"

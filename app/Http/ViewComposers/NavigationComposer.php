@@ -6,7 +6,7 @@ use Auth;
 use Illuminate\View\View;
 
 /**
- * NavigationComposer will share data in all instances of view, through ComposerServiceProvider.
+ * NavigationComposer will share data in all instances of the view, through ComposerServiceProvider.
  * The view must be loaded 
  *  
  */
