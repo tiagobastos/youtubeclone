@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+// Channel Routes
+// Alternative to route group middleware definition:
+// Route::group(['middleware' => ['auth']], function () {  ...  });
+Route::get('/channel/{channel}/edit', 'ChannelSettingsController@edit');
+Route::put('/channel/{channel}/edit', 'ChannelSettingsController@update');

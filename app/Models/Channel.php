@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 
-use App\Models\User;
 
 class Channel extends Model
 {
@@ -19,6 +19,11 @@ class Channel extends Model
         'description',
         'image_filename'
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 
     public function user()
     {
