@@ -41,7 +41,8 @@ class ChannelUpdateRequest extends FormRequest
                 Rule::unique('channels', 'slug')
                     ->ignore($channelId, 'id') 
             ],
-            'description' => 'max:1000',
+            'description' => ['max:1000'],
+            'image' => ['max:6144']
         ];
     }
 }

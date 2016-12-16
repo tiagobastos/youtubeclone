@@ -9,7 +9,7 @@
 
                     <div class="panel-body">
 
-                        <form action="{{ url('/channel/'.$channel->slug.'/edit') }}" method="POST">
+                        <form action="{{ url('/channel/'.$channel->slug.'/edit') }}" method="POST" enctype="multipart/form-data">
                             {{ csrf_field() }} 
                             {{ method_field('PUT') }}
 
@@ -42,7 +42,6 @@
 
                             <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
                                 <label for="description" class="control-label">Description</label>
-
                                 <textarea name="description" id="description" class="form-control">{{ old('description') ?? $channel->description }}</textarea>
 
                                 @if ($errors->has('description'))
@@ -50,6 +49,11 @@
                                         <strong>{{ $errors->first('description') }}</strong>
                                     </span>
                                 @endif
+                            </div>
+
+                            <div class="form-group">
+                                <label for="image" class="control-label">Channel Image</label>
+                                <input type="file" name="image" id="image" accept="image/*">
                             </div>
 
                             <button type="submit" class="btn btn-primary">Update</button>

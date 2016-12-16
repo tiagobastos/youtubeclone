@@ -56,10 +56,18 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key' => 'your-key',
-            'secret' => 'your-secret',
-            'region' => 'your-region',
+            'key' => env('S3_KEY'),
+            'secret' => env('S3_SECRET'),
+            'region' => 'us-east-1',
             'bucket' => 'your-bucket',
+        ],
+
+        's3images' => [
+            'driver' => 's3',
+            'key' => env('S3_KEY'),
+            'secret' => env('S3_SECRET'),
+            'region' => 'eu-west-1',
+            'bucket' => 'youtubeclone.com',
         ],
 
     ],
