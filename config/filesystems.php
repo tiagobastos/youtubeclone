@@ -54,18 +54,35 @@ return [
             'visibility' => 'public',
         ],
 
+
         's3' => [
             'driver' => 's3',
             'key' => env('S3_KEY'),
             'secret' => env('S3_SECRET'),
-            'region' => 'us-east-1',
-            'bucket' => 'your-bucket',
-        ],
+            'region' => 'eu-west-1',
+            'bucket' => 'you-bucket',
+        ], 
 
         's3images' => [
             'driver' => 's3',
             'key' => env('S3_KEY'),
             'secret' => env('S3_SECRET'),
+            'region' => 'eu-west-1',
+            'bucket' => 'youtubeclone.com',
+        ],
+
+        's3videos' => [
+            'driver' => 's3',
+            'key' => env('S3_KEY_VIDEOS'),
+            'secret' => env('S3_SECRET_VIDEOS'),
+            'region' => 'eu-west-1',
+            'bucket' => 'youtubeclone.com',
+        ],
+
+        's3drop' => [
+            'driver' => 's3',
+            'key' => env('S3_KEY_DROP'),
+            'secret' => env('S3_SECRET_DROP'),
             'region' => 'eu-west-1',
             'bucket' => 'youtubeclone.com',
         ],
